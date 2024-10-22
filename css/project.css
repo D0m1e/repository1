@@ -1,0 +1,215 @@
+body {
+  font-family: "Inter", sans-serif; 
+  padding: 16px; 
+  background-color: darkseagreen; 
+} 
+.wrapper { 
+  display: flex; 
+  flex-direction: column; 
+  gap: 20px; 
+} 
+.header { 
+  width: 100%; 
+  height: 60px; 
+  background-color: seagreen; 
+  border-radius: 12px; 
+  padding: 8px 6px;  
+} 
+.header img { 
+  object-fit: contain; 
+  width: 60px; 
+} 
+.header__list { 
+  display: flex; 
+  align-items: center; 
+  gap: 16px; 
+  margin-left: 16px; 
+} 
+.header__list li a { 
+  font-size: 24px; 
+  text-decoration: none; 
+  color: blanchedalmond; 
+  transition: all 0.3s ease; 
+} 
+.header__list li a:hover { 
+  color: white; 
+  text-decoration: underline; 
+} 
+.header__button-signIn { 
+  margin-left: auto; 
+  margin-right: 16px; 
+  background-color: lightgreen; 
+  padding: 8px; 
+  border-radius: 10px; 
+  box-shadow: darkgreen 4px 4px 0px;
+  color: darkgreen; 
+  font-size: 20px; 
+  font-weight: 700;
+  transition: all 0.3s ease; 
+} 
+.header__button-signIn:active { 
+  box-shadow: darkgreen 0px 0px 0px; 
+  margin-right: 12px;
+  margin-top: 8px;
+} 
+
+/*Product*/ 
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+    padding: 16px;
+}
+.item {
+    display: flex;
+    flex-direction: column;
+    background-color: seagreen;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: visible;
+    position: relative;
+    text-align: left;
+    max-width: 100%;
+    transition: 0.3s;
+}
+.item:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Збільшена тінь при наведенні */
+}
+.item img {
+    width: 100%;
+    max-height: 200px;
+    height: auto;
+    object-fit: cover;
+}
+.item h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 16px 4px 8px;
+  color: blanchedalmond;
+}
+.item p {
+  margin: 0 4px 16px;
+  color: blanchedalmond;
+}
+.price {
+  font-size: 22px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.order-button {
+  margin-top: auto;
+  background-color: lightgreen;
+  color: darkgreen;
+  font-weight: 700;
+  border: none;
+  padding: 8px 0;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 0 0 8px 8px;
+  width: 100%;
+  transition: 0.3s;
+}
+.order-button:hover {
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: 0.3s;
+}
+.order-button:active {
+  background-color: seagreen;
+  color: blanchedalmond;
+}
+.badge {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  background-color: red;
+  color: white;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/*media*/
+@media (max-width: 960px) {
+    .container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .item {
+        max-width: 90%;
+    }
+}
+.header__menu {
+    position: relative; /* Встановлюємо для позиціювання дочірніх елементів */
+    margin-left: 16px; /* Відступ для кнопки меню */
+}
+
+.menu-button {
+    display: none;
+    background-color: lightgreen; /* Колір кнопки "Меню" */
+    color: darkgreen; /* Колір тексту кнопки */
+    border: none; /* Без кордону */
+    border-radius: 10px; /* Закруглені кути */
+    padding: 8px 12px; /* Внутрішній відступ */
+    font-size: 20px; /* Розмір шрифту */
+    font-weight: 700;
+    cursor: pointer; /* Курсор при наведенні */
+    transition: 0.3s; /* Перехід при наведенні */
+    box-shadow: darkgreen -4px 4px 0px;
+}
+
+.dropdown-menu {
+    display: none; /* Сховати випадаюче меню за замовчуванням */
+    position: absolute; /* Відображення абсолютне */
+    top: 0; /* Розміщення під кнопкою "Меню" */
+    left: 100%;
+    background-color: seagreen; /* Фоновий колір меню */
+    border-radius: 8px; /* Закруглені кути */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь */
+    z-index: 1000; /* Щоб меню було поверх інших елементів */
+    transition: 0.3s;
+}
+
+.header__menu:hover .dropdown-menu {
+    display: block; /* Показати меню при наведенні на контейнер */
+}
+
+.dropdown-item {
+    width: 100%; /* Зробити кнопки на всю ширину */
+    font-weight: 700;
+    border-radius: 8px;
+    padding: 10px; /* Внутрішній відступ */
+    border: none; /* Без кордону */
+    background: none; /* Без фону */
+    color: blanchedalmond; /* Колір тексту */
+    text-align: left; /* Вирівняти текст */
+    cursor: pointer; /* Курсор при наведені */
+    transition: 0.3s;
+}
+
+.dropdown-item:hover {
+    background-color: darkgreen;
+}
+/* Медіа-запит для екранів менше 768 пікселів */
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+    .header__list {
+        display: none; /* Сховати список навігації */
+    }
+    .header__select {
+        display: block; /* Показати випадаюче меню */
+        margin-left: 16px; /* Додати відступ */
+        padding: 8px; /* Додати внутрішній відступ */
+        font-size: 16px; /* Розмір шрифту */
+        border-radius: 8px; /* Закруглені кути */
+        border: 1px solid #ccc; /* Кордон */
+        background-color: white; /* Фоновий колір */
+    }
+    .menu-button {
+    display: flex;
+    }
+}
