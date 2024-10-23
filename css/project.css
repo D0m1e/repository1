@@ -73,7 +73,7 @@ body {
     transition: 0.3s;
 }
 .item:hover {
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Збільшена тінь при наведенні */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 .item img {
     width: 100%;
@@ -142,72 +142,70 @@ body {
     }
 }
 .header__menu {
-    position: relative; /* Встановлюємо для позиціювання дочірніх елементів */
-    margin-left: 16px; /* Відступ для кнопки меню */
+    position: relative;
+    margin-left: 16px;
 }
 
 .menu-button {
     display: none;
-    background-color: lightgreen; /* Колір кнопки "Меню" */
-    color: darkgreen; /* Колір тексту кнопки */
-    border: none; /* Без кордону */
-    border-radius: 10px; /* Закруглені кути */
-    padding: 8px 12px; /* Внутрішній відступ */
-    font-size: 20px; /* Розмір шрифту */
+    background-color: lightgreen;
+    color: darkgreen;
+    border: none;
+    border-radius: 10px; 
+    padding: 8px 12px; 
+    font-size: 20px; 
     font-weight: 700;
-    cursor: pointer; /* Курсор при наведенні */
-    transition: 0.3s; /* Перехід при наведенні */
+    cursor: pointer; 
+    transition: 0.3s; 
     box-shadow: darkgreen -4px 4px 0px;
 }
 
 .dropdown-menu {
-    display: none; /* Сховати випадаюче меню за замовчуванням */
-    position: absolute; /* Відображення абсолютне */
-    top: 0; /* Розміщення під кнопкою "Меню" */
+    display: none; 
+    position: absolute; 
+    top: 0; 
     left: 100%;
-    background-color: seagreen; /* Фоновий колір меню */
-    border-radius: 8px; /* Закруглені кути */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Тінь */
-    z-index: 1000; /* Щоб меню було поверх інших елементів */
+    background-color: seagreen;
+    border-radius: 8px; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    z-index: 1000; 
     transition: 0.3s;
 }
 
 .header__menu:hover .dropdown-menu {
-    display: block; /* Показати меню при наведенні на контейнер */
+    display: block; 
 }
 
 .dropdown-item {
-    width: 100%; /* Зробити кнопки на всю ширину */
+    width: 100%; 
     font-weight: 700;
     border-radius: 8px;
-    padding: 10px; /* Внутрішній відступ */
-    border: none; /* Без кордону */
-    background: none; /* Без фону */
-    color: blanchedalmond; /* Колір тексту */
-    text-align: left; /* Вирівняти текст */
-    cursor: pointer; /* Курсор при наведені */
+    padding: 10px; 
+    border: none; 
+    background: none; 
+    color: blanchedalmond; 
+    text-align: left; 
+    cursor: pointer; 
     transition: 0.3s;
 }
-
 .dropdown-item:hover {
     background-color: darkgreen;
 }
-/* Медіа-запит для екранів менше 768 пікселів */
 @media (max-width: 768px) {
     .container {
         grid-template-columns: repeat(1, 1fr);
     }
     .header__list {
-        display: none; /* Сховати список навігації */
+        display: none;
     }
     .header__select {
-        display: block; /* Показати випадаюче меню */
-        margin-left: 16px; /* Додати відступ */
-        padding: 8px; /* Додати внутрішній відступ */
-        font-size: 16px; /* Розмір шрифту */
-        border-radius: 8px; /* Закруглені кути */
-        border: 1px solid #ccc; /* Кордон */
-        background-color: white; /* Фоновий колір */
+        display: block;
+        margin-left: 16px;
+        padding: 8px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+        background-color: white;
     }
     .menu-button {
     display: flex;
